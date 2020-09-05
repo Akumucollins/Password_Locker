@@ -132,10 +132,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")",
+        "peekOfCode": "def main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")\n        print(\"Select the  short code to navigate through:'ex' to log out\")\n        option = input().lower()\n        print('\\n')\n        if option == \"y\":\n            print('Enter first name')",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")\n```\n",
+            "value": "\n```python\nfrom run import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")\n        print(\"Select the  short code to navigate through:'ex' to log out\")\n        option = input().lower()\n        print('\\n')\n        if option == \"y\":\n            print('Enter first name')\n```\n",
             "supportThemeIcons": false
         }
     },
