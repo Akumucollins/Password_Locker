@@ -1,0 +1,154 @@
+[
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {
+            "value": "\n```python\nimport pyperclip\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {
+            "value": "\n```python\nimport unittest\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Credentials",
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "isExtraImport": true,
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nimport password_locker\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "isExtraImport": true,
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nimport password_locker\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Credentials",
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "isExtraImport": true,
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nimport password_locker\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "isExtraImport": true,
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nimport password_locker\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {
+            "value": "\n```python\nimport string\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {
+            "value": "\n```python\nimport random\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "TestUser",
+        "kind": 6,
+        "importPath": "credentials_test",
+        "description": "credentials_test",
+        "peekOfCode": "class TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_credentials = Credentials( \"twitter\", \"akumu_collins\", \"1234\")# create credential object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''",
+        "detail": "credentials_test",
+        "documentation": {
+            "value": "\n```python\nfrom credentials_test import TestUser\n```\n\n```python\n\n\n```\n\n```python\nclass TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_credentials = Credentials( \"twitter\", \"akumu_collins\", \"1234\")# create credential object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "peekOfCode": "class User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name ",
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nfrom password_locker import User\n```\n\n```python\n\n\n```\n\n```python\nclass User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name \n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Credentials",
+        "kind": 6,
+        "importPath": "password_locker",
+        "description": "password_locker",
+        "peekOfCode": "class Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,account_name,user_name,password):\n        # docstring removed for simplicity\n        self.account_name = account_name\n        self.user_name = user_name\n        self.password = password ",
+        "detail": "password_locker",
+        "documentation": {
+            "value": "\n```python\nfrom password_locker import Credentials\n```\n\n```python\n\n\n```\n\n```python\nclass Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,account_name,user_name,password):\n        # docstring removed for simplicity\n        self.account_name = account_name\n        self.user_name = user_name\n        self.password = password \n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    while True: \n        print(\"***Bienvenue to Password Locker!!!***\")\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "TestUser",
+        "kind": 6,
+        "importPath": "user_test",
+        "description": "user_test",
+        "peekOfCode": "class TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''",
+        "detail": "user_test",
+        "documentation": {
+            "value": "\n```python\nfrom user_test import TestUser\n```\n\n```python\n\n\n```\n\n```python\nclass TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
