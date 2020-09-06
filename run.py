@@ -1,17 +1,18 @@
-import random
 from password_locker import User
 from password_locker import Credentials
  
 def main():
+    
     while True: 
-        print("***Bienvenue to Password Locker!!!***")
+        print("***Welcome to Password Locker!!!***")
         print('\n')
         print("Do you have an account with Password Locker?y/n")
-        print("Select the  short code to navigate through:'ex' to log out")
+        print("Select the  short code to navigate through:'lo' to logout")
         option = input().lower()
         print('\n')
         
         if option == "y":
+            print("Signup to Password Locker account")
             print('Enter first name')
             first_name = input()
             print('Enter last name')
@@ -37,6 +38,7 @@ def main():
                 
                 if short_code == 'lg':
                     print("***Proceed to login***")
+                    print('\n')
                     print("Enter account name")
                     entered_accname = input()
                     print("Enter username")
@@ -47,7 +49,36 @@ def main():
                    print(f"Welcome {entered_username} to your Password Locker account")
                    print('\n')
                    
+        elif option == "n":    
+               print("***Login to your Password Locker account***")
+               print('\n')
+               print("Enter account name")
+               default_accname = input()
+               print("Enter username")
+               default_user_name = input()
+               print("Enter password")
+               default_user_password = input()
+               print('\n')
                
-        
+               while default_user_name != 'testuser' or default_user_password != '1234':
+                    print("Wrong username or password.Use the format of 'testuser' in username and '1234' in password ")  
+                    print('\n')
+                    print("Enter account name")
+                    default_accname = input()
+                    print("Enter username")
+                    default_user_name = input()
+                    print("Enter password")
+                    default_user_password = input()
+                    print('\n')
+                    
+               else:
+                   print("You have login successfully") 
+                   print('\n')   
+               
+        elif short_code == "lo":    
+            break
+        else:
+           print("Enter valid code ti continue")    
+             
 if __name__ == '__main__':
     main()        
