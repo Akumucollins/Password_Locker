@@ -132,10 +132,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def create_signup(first_name,last_name,confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name,last_name,confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user login details\n    \"\"\"",
+        "peekOfCode": "def create_signup(first_name,last_name,confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name,last_name,confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name,last_name,confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name,last_name,confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user login details\n    \"\"\"\n```\n",
+            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name,last_name,confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name,last_name,confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -144,10 +144,34 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user login details\n    \"\"\"\n    user.save_user() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")",
+        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user login details\n    \"\"\"\n    user.save_user() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")\n```\n",
+            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "add_credentials",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import add_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "save_credential",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n    account.save_credentials() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import save_credential\n```\n\n```python\n\n\n```\n\n```python\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n    account.save_credentials() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker?y/n\")\n```\n",
             "supportThemeIcons": false
         }
     },

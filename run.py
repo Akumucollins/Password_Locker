@@ -10,9 +10,22 @@ def create_signup(first_name,last_name,confirm_password):
 
 def save_user(user):
     """
-    Function to save user login details
+    Function to save user signup details
     """
     user.save_user() 
+
+def add_credentials(default_accname,default_username,default_password):
+    """
+    Function to add a new account and its credentials
+    """
+    new_credentials = Credentials(default_accname,default_username,default_password)
+    return new_credentials
+ 
+def save_credential(account):
+    """
+    Function to save accountcredential details
+    """
+    account.save_credentials() 
  
 def main():
     
@@ -36,41 +49,31 @@ def main():
             confirm_password = input()
             
             save_user(create_signup( first_name, last_name, created_user_name, confirm_password))
-            print(f"Congratulations, a new Account created for: {first_name} {last_name} your have successfully created a Password Locker account with {created_user_name} username using {confirm_password}")
+            print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
             
-            
-            # while confirm_password != created_user_password:
-            #     print("Invalid!!! Password did not match")
-            #     print("Please enter your password again")
-            #     created_user_password = input()
-            #     print("Confirm your password")
-            #     confirm_user_password = input()
-                
-            # else:
-            #     print('\n')
-            #     print(f"Congratulations {created_user_name} your have successfully created a Password Locker account")
-                
             while True:
                     print("Select a short code to navigate through:'lg' to login :'lo' to logout")
                     short_code = input().lower()
                     print('\n')
                     
                     if short_code == 'lo':
-                        print("Goodbye.....Your have succefully logout you Passwork Locker account") 
+                        print("Goodbye {first_name} {last_name} Your have succefully logout your Password Locker account") 
                         break
                     
                     elif short_code == 'lg':
                         print("*** Proceed to login ***")
                         print('\n')
                         print("Enter account name")
-                        entered_accname = input()
+                        default_accname = input()
                         print("Enter username")
-                        entered_username = input()
+                        default_username = input()
                         print("Enter password")
-                        entered_password = input()
-                    else:
-                        print(f"Welcome {entered_username} to your Password Locker account")
-                        print('\n')     
+                        default_password = input()
+
+                        save_credential(add_credentials(default_accname,default_username,default_password))
+                        print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
+                        print('\n')    
+                         
                     
         elif option == "y":    
                print("*** Login to your Password Locker account ***")
@@ -78,7 +81,7 @@ def main():
                short_code = input().lower()
                
                if short_code == 'lo':
-                    print("Goodbye.....Your have succefully logout you Passwork Locker account") 
+                    print("Goodbye {default_username}  Your have succefully logout your Password Locker account") 
                     break
                
                elif short_code == 'lg':
@@ -86,29 +89,12 @@ def main():
                     print("Enter account name")
                     default_accname = input()
                     print("Enter username")
-                    default_user_name = input()
+                    default_username = input()
                     print("Enter password")
-                    default_user_password = input()
+                    default_password = input()
                     print('\n')
                     print(f"You have login successfully") 
                     print('\n')   
-               
-               
-                    # while default_user_name != 'testuser' or default_user_password != '1234':
-                    #         print("Wrong username or password.Use the format of 'testuser' in username and '1234' in password ")  
-                    #         print('\n')
-                    #         print("Enter account name")
-                    #         default_accname = input()
-                    #         print("Enter username")
-                    #         default_user_name = input()
-                    #         print("Enter password")
-                    #         default_user_password = input()
-                    #         print('\n')
-                            
-                    # else:
-                    #     print(f"You have login successfully") 
-                    #     print('\n')   
-               
              
 if __name__ == '__main__':
     main()        
