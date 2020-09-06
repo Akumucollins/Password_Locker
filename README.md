@@ -54,7 +54,7 @@
 
 ---
 
->The application is an open-source product if you  want to improve it or include an event of a bug  contact this
+> The application is an open-source product if you  want to improve it or include an event of a bug  contact this
 > [Email](akumucollins001@gmail.com) .
 
 ***
