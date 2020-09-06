@@ -32,7 +32,7 @@ def main():
     while True: 
         print("*** Welcome to Password Locker!!! ***")
         print('\n')
-        print("Do you have an account with Password Locker?y/n")
+        print("Do you have an account with Password Locker? y/n")
         option = input().lower()
         
         if option == "n":
@@ -52,7 +52,7 @@ def main():
             print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
             
             while True:
-                    print("Select a short code to navigate through:'lg' to login :'lo' to logout")
+                    print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
                     short_code = input().lower()
                     print('\n')
                     
@@ -73,11 +73,26 @@ def main():
                         save_credential(add_credentials(default_accname,default_username,default_password))
                         print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
                         print('\n')    
-                         
+                        
+                    while True:
+                        print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the credentials_list") 
+                        short_code = input().lower()
+                    
+                        if short_code == 'cc':
+                                print("Enter account name")
+                                default_accname = input()
+                                print("Enter username")
+                                default_username = input()
+                                print("Enter password")
+                                default_password = input()
+
+                                save_credential(add_credentials(default_accname,default_username,default_password))
+                                print(f"Welcome, {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
+                                print('\n')
                     
         elif option == "y":    
                print("*** Login to your Password Locker account ***")
-               print("Select a short code to navigate through:'lg' to login :'lo' to logout")
+               print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
                short_code = input().lower()
                
                if short_code == 'lo':
