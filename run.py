@@ -32,7 +32,26 @@ def display_credentials(default_accname):
     Function to display  credentials_list
     """
     return Credentials.display_credentials(default_accname)
- 
+
+def find_credentials(default_accname):
+    '''
+    Function that finds credentials by account name
+    '''
+
+    return Credentials.find_by_name(default_accname)
+
+def existing_credentials(default_accname):
+    '''
+    Functiion that checks if an account really exists
+    '''
+    return Credentials.credentials_exists(default_accname)
+
+def delete_credentials(credentials):
+    """
+    Function to delete an account
+    """
+    return Credentials.delete_credentials(credentials)
+
 def main():
     
     while True: 
@@ -107,10 +126,17 @@ def main():
                                     print('\n')
                                 else:
                                     print('\n')
-                                    print("You donn't seem to have any credentials saved yet")
+                                    print("You don't seem to have any credentials saved yet")
                                     print('\n')
                                     
-                      
+                        elif short_code == 'de':
+                                print("search for account to delete credential")
+
+                                default_accname = input()
+                                if existing_credentials(default_accname):
+                                    search_account = find_credentials(default_accname)
+                                    delete_credentials(search_account)
+                                    print("Your Password Locker {default_accname} account deleted successfully")
                     
         elif option == "y":    
                print("*** Login to your Password Locker account ***")

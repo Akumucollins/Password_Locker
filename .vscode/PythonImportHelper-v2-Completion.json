@@ -180,10 +180,46 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")",
+        "peekOfCode": "def display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import display_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n```\n",
+            "value": "\n```python\nfrom run import display_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "find_credentials",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)\ndef existing_credentials(default_accname):\n    '''\n    Functiion that checks if an account really exists\n    '''\n    return Credentials.credentials_exists(default_accname)",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import find_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)\ndef existing_credentials(default_accname):\n    '''\n    Functiion that checks if an account really exists\n    '''\n    return Credentials.credentials_exists(default_accname)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "existing_credentials",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def existing_credentials(default_accname):\n    '''\n    Functiion that checks if an account really exists\n    '''\n    return Credentials.credentials_exists(default_accname)\ndef delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import existing_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef existing_credentials(default_accname):\n    '''\n    Functiion that checks if an account really exists\n    '''\n    return Credentials.credentials_exists(default_accname)\ndef delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "delete_credentials",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import delete_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n```\n",
             "supportThemeIcons": false
         }
     },
