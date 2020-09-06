@@ -13,7 +13,7 @@
 
 ### Here is the **WebPage Screenshoot** ;
 
-![alt text](src/assets/img/Screen_shot.png)
+![alt text](img/Screen_shot.png)
 
 ---
 
@@ -55,7 +55,7 @@
 ---
 
 >The application is an open-source product if you  want to improve it or include an event of a bug  contact this
-> [email](akumucollins001@gmail.com) .
+> [Email](akumucollins001@gmail.com) .
 
 ***
 

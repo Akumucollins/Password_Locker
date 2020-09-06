@@ -132,10 +132,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def create_signup(first_name, last_name,  created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"",
+        "peekOfCode": "def create_signup(first_name, last_name, created_user_name, created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name, last_name,  created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n```\n",
+            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name, last_name, created_user_name, created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n```\n",
             "supportThemeIcons": false
         }
     },

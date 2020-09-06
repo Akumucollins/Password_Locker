@@ -1,11 +1,11 @@
 from password_locker import User
 from password_locker import Credentials
  
-def create_signup(first_name, last_name,  created_user_password, confirm_password):
+def create_signup(first_name, last_name, created_user_name, created_user_password, confirm_password):
     """
     Function to create a first time signup
     """
-    new_user = User(first_name, last_name, created_user_password, confirm_password)
+    new_user = User(first_name, last_name, created_user_name, created_user_password, confirm_password)
     return new_user
 
 def save_user(user):
@@ -73,7 +73,7 @@ def main():
             print('Confirm password')
             confirm_password = input()
             
-            save_user(create_signup( first_name, last_name, created_user_name, confirm_password))
+            save_user(create_signup( first_name, last_name, created_user_name, created_user_password, confirm_password))
             print('-' * 10)
             print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
             
