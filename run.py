@@ -100,7 +100,7 @@ def main():
                         print('\n')    
                         
                     while True:
-                        print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the credentials_list") 
+                        print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 
                         short_code = input().lower()
                     
                         if short_code == 'cc':
@@ -141,7 +141,31 @@ def main():
                                     print(f"Your Password Locker {default_accname} account deleted successfully")
                                     print('\n')
                                 else:
-                                    print("The {default_accname} account credentials you want to delete doesn't exist")                    
+                                    print("The {default_accname} account credentials you want to delete doesn't exist")   
+                                    print('\n')
+                        elif short_code == 'fc':
+                                print("Enter the account name you want to search for")
+                                
+                                default_accname = input()
+                                if existing_credentials(default_accname):
+                                    print('\n')
+                                    search_account = find_credentials(default_accname)
+                                    print(f"Hello, {default_username} your account credentials is as follows:")
+                                    print('-' * 10)
+                                    
+                                    print(f"Account Name: {default_accname}")
+                                    print(f"Your Password: {default_password}")
+                                    
+                                else:
+                                    print("The {default_accname} account credentials doesn't exist")
+                                    print('\n')
+                                    
+                        elif  short_code == 'lo':            
+                                    print("Goodbye {default_username}  Your have succefully logout your Password Locker account") 
+                                    break  
+                        else:
+                            print("Sorry, invalid short code. Enter a valid code to continue")
+                                                     
         elif option == "y":    
                print("*** Login to your Password Locker account ***")
                print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
@@ -158,10 +182,78 @@ def main():
                     print("Enter username")
                     default_username = input()
                     print("Enter password")
+                    
                     default_password = input()
-                    print('\n')
-                    print(f"You have login successfully") 
-                    print('\n')   
-             
+                    save_credential(add_credentials(default_accname, default_username, default_password))
+                    print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
+                    print('\n')    
+                        
+                    while True:
+                        print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 
+                        short_code = input().lower()
+                    
+                        if short_code == 'cc':
+                                print("Enter account name")
+                                default_accname = input()
+                                print("Enter username")
+                                default_username = input()
+                                print("Enter password")
+                                default_password = input()
+
+                                save_credential(add_credentials(default_accname, default_username, default_password))
+                                print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
+                                print('\n')
+                        
+                        elif short_code == 'dc':
+                                if display_credentials(default_accname):
+                                    print("Welcome to the list of all your credentials")
+                                    print('\n')
+                                    
+                                    for credential in display_credentials(default_accname):
+                                         print(f" Account Name: {credential.default_accname}  \n Username: {credential.default_username} \n Password: {credential.default_password}")
+                                 
+                                    print('\n')
+                                else:
+                                    print('\n')
+                                    print(f"You don't seem to have any credentials saved yet")
+                                    print('\n')
+                                    
+                        elif short_code == 'de':
+                                print("Enter name of the account you want to delete its credentials")
+
+                                default_accname = input()
+                                if existing_credentials(default_accname):
+                                    print('\n')
+                                    search_account = find_credentials(default_accname)
+                                    delete_credentials(search_account)
+                                    
+                                    print(f"Your Password Locker {default_accname} account deleted successfully")
+                                    print('\n')
+                                else:
+                                    print("The {default_accname} account credentials you want to delete doesn't exist")   
+                                    print('\n')
+                        elif short_code == 'fc':
+                                print("Enter the account name you want to search for")
+                                
+                                default_accname = input()
+                                if existing_credentials(default_accname):
+                                    print('\n')
+                                    search_account = find_credentials(default_accname)
+                                    print(f"Hello, {default_username} your account credentials is as follows:")
+                                    print('-' * 10)
+                                    
+                                    print(f"Account Name: {default_accname}")
+                                    print(f"Your Password: {default_password}")
+                                    
+                                else:
+                                    print("The {default_accname} account credentials doesn't exist")
+                                    print('\n')
+                                    
+                        elif  short_code == 'lo':            
+                                    print("Goodbye {default_username}  Your have succefully logout your Password Locker account") 
+                                    break  
+                        else:
+                            print("Sorry, invalid short code. Enter a valid code to continue")
+                            
 if __name__ == '__main__':
     main()        
