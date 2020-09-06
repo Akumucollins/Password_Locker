@@ -1,6 +1,19 @@
 from password_locker import User
 from password_locker import Credentials
  
+def create_signup(first_name,last_name,confirm_password):
+    """
+    Function to create a first time signup
+    """
+    new_user = User(first_name,last_name,confirm_password)
+    return new_user
+
+def save_user(user):
+    """
+    Function to save user login details
+    """
+    user.save_user() 
+ 
 def main():
     
     while True: 
@@ -22,7 +35,9 @@ def main():
             print('Confirm password')
             confirm_password = input()
             
-            print(f"Congratulations {created_user_name} your have successfully created a Password Locker account")
+            save_user(create_signup( first_name, last_name, created_user_name, confirm_password))
+            print(f"Congratulations, a new Account created for: {first_name} {last_name} your have successfully created a Password Locker account with {created_user_name} username using {confirm_password}")
+            
             
             # while confirm_password != created_user_password:
             #     print("Invalid!!! Password did not match")
@@ -36,7 +51,7 @@ def main():
             #     print(f"Congratulations {created_user_name} your have successfully created a Password Locker account")
                 
             while True:
-                    print("Select a short code to navigate through:'lg' to login 'lo' to logout")
+                    print("Select a short code to navigate through:'lg' to login :'lo' to logout")
                     short_code = input().lower()
                     print('\n')
                     
