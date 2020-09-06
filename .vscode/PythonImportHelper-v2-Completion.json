@@ -156,10 +156,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"",
+        "peekOfCode": "def add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import add_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n```\n",
+            "value": "\n```python\nfrom run import add_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef add_credentials(default_accname,default_username,default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname,default_username,default_password)\n    return new_credentials\ndef save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -168,10 +168,22 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n    account.save_credentials() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")",
+        "peekOfCode": "def save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import save_credential\n```\n\n```python\n\n\n```\n\n```python\ndef save_credential(account):\n    \"\"\"\n    Function to save accountcredential details\n    \"\"\"\n    account.save_credentials() \ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n```\n",
+            "value": "\n```python\nfrom run import save_credential\n```\n\n```python\n\n\n```\n\n```python\ndef save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "display_credentials",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import display_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n```\n",
             "supportThemeIcons": false
         }
     },

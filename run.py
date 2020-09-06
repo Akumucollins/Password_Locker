@@ -23,9 +23,15 @@ def add_credentials(default_accname,default_username,default_password):
  
 def save_credential(account):
     """
-    Function to save accountcredential details
+    Function to save account credentials details
     """
     account.save_credentials() 
+
+def display_credentials(default_accname):
+    """
+    Function to display  credentials_list
+    """
+    return Credentials.display_credentials(default_accname)
  
 def main():
     
@@ -87,8 +93,24 @@ def main():
                                 default_password = input()
 
                                 save_credential(add_credentials(default_accname,default_username,default_password))
-                                print(f"Welcome, {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
+                                print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
                                 print('\n')
+                        
+                        elif short_code == 'dc':
+                                if display_credentials(default_accname):
+                                    print("Welcome to the list of all your credentials")
+                                    print('\n')
+                                    
+                                    for credential in display_credentials(default_accname):
+                                         print(f" Account Name: {credential.default_accname}  \n Username: {credential.default_username} \n Password: {credential.default_password}")
+                                 
+                                    print('\n')
+                                else:
+                                    print('\n')
+                                    print("You donn't seem to have any credentials saved yet")
+                                    print('\n')
+                                    
+                      
                     
         elif option == "y":    
                print("*** Login to your Password Locker account ***")
