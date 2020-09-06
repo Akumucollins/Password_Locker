@@ -1,11 +1,11 @@
 from password_locker import User
 from password_locker import Credentials
  
-def create_signup(first_name,last_name,confirm_password):
+def create_signup(first_name, last_name, confirm_password):
     """
     Function to create a first time signup
     """
-    new_user = User(first_name,last_name,confirm_password)
+    new_user = User(first_name, last_name, confirm_password)
     return new_user
 
 def save_user(user):
@@ -14,11 +14,11 @@ def save_user(user):
     """
     user.save_user() 
 
-def add_credentials(default_accname,default_username,default_password):
+def add_credentials(default_accname, default_username, default_password):
     """
     Function to add a new account and its credentials
     """
-    new_credentials = Credentials(default_accname,default_username,default_password)
+    new_credentials = Credentials(default_accname, default_username, default_password)
     return new_credentials
  
 def save_credential(account):
@@ -95,7 +95,7 @@ def main():
                         print("Enter password")
                         default_password = input()
 
-                        save_credential(add_credentials(default_accname,default_username,default_password))
+                        save_credential(add_credentials(default_accname, default_username, default_password))
                         print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
                         print('\n')    
                         
@@ -111,7 +111,7 @@ def main():
                                 print("Enter password")
                                 default_password = input()
 
-                                save_credential(add_credentials(default_accname,default_username,default_password))
+                                save_credential(add_credentials(default_accname, default_username, default_password))
                                 print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
                                 print('\n')
                         
@@ -126,18 +126,22 @@ def main():
                                     print('\n')
                                 else:
                                     print('\n')
-                                    print("You don't seem to have any credentials saved yet")
+                                    print(f"You don't seem to have any credentials saved yet")
                                     print('\n')
                                     
                         elif short_code == 'de':
-                                print("search for account to delete credential")
+                                print("Enter name of the account you want to delete its credentials")
 
                                 default_accname = input()
                                 if existing_credentials(default_accname):
+                                    print('\n')
                                     search_account = find_credentials(default_accname)
                                     delete_credentials(search_account)
-                                    print("Your Password Locker {default_accname} account deleted successfully")
-                    
+                                    
+                                    print(f"Your Password Locker {default_accname} account deleted successfully")
+                                    print('\n')
+                                else:
+                                    print("The {default_accname} account credentials you want to delete doesn't exist")                    
         elif option == "y":    
                print("*** Login to your Password Locker account ***")
                print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
