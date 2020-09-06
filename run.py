@@ -1,11 +1,11 @@
 from password_locker import User
 from password_locker import Credentials
  
-def create_signup(first_name, last_name, confirm_password):
+def create_signup(first_name, last_name,  created_user_password, confirm_password):
     """
     Function to create a first time signup
     """
-    new_user = User(first_name, last_name, confirm_password)
+    new_user = User(first_name, last_name, created_user_password, confirm_password)
     return new_user
 
 def save_user(user):
@@ -27,11 +27,11 @@ def save_credential(account):
     """
     account.save_credentials() 
 
-def display_credentials(default_accname):
+def display_credentials():
     """
     Function to display  credentials_list
     """
-    return Credentials.display_credentials(default_accname)
+    return Credentials.display_credentials()
 
 def find_credentials(default_accname):
     '''
@@ -74,6 +74,7 @@ def main():
             confirm_password = input()
             
             save_user(create_signup( first_name, last_name, created_user_name, confirm_password))
+            print('-' * 10)
             print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
             
             while True:
@@ -96,6 +97,7 @@ def main():
                         default_password = input()
 
                         save_credential(add_credentials(default_accname, default_username, default_password))
+                        print('-' * 10)
                         print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
                         print('\n')    
                         
@@ -112,15 +114,17 @@ def main():
                                 default_password = input()
 
                                 save_credential(add_credentials(default_accname, default_username, default_password))
+                                print('-' * 10)
                                 print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
                                 print('\n')
                         
                         elif short_code == 'dc':
-                                if display_credentials(default_accname):
+                                if display_credentials():
                                     print("Welcome to the list of all your credentials")
                                     print('\n')
                                     
-                                    for credential in display_credentials(default_accname):
+                                    print('-' * 10)
+                                    for credential in display_credentials():
                                          print(f" Account Name: {credential.default_accname}  \n Username: {credential.default_username} \n Password: {credential.default_password}")
                                  
                                     print('\n')
@@ -138,6 +142,7 @@ def main():
                                     search_account = find_credentials(default_accname)
                                     delete_credentials(search_account)
                                     
+                                    print('-' * 10)
                                     print(f"Your Password Locker {default_accname} account deleted successfully")
                                     print('\n')
                                 else:
@@ -146,12 +151,13 @@ def main():
                         elif short_code == 'fc':
                                 print("Enter the account name you want to search for")
                                 
+                                    
+                                print('-' * 10)
                                 default_accname = input()
                                 if existing_credentials(default_accname):
                                     print('\n')
                                     search_account = find_credentials(default_accname)
                                     print(f"Hello, {default_username} your account credentials is as follows:")
-                                    print('-' * 10)
                                     
                                     print(f"Account Name: {default_accname}")
                                     print(f"Your Password: {default_password}")
@@ -172,7 +178,7 @@ def main():
                short_code = input().lower()
                
                if short_code == 'lo':
-                    print("Goodbye {default_username}  Your have succefully logout your Password Locker account") 
+                    print("Goodbye....Your have succefully logout your Password Locker account") 
                     break
                
                elif short_code == 'lg':
@@ -185,6 +191,7 @@ def main():
                     
                     default_password = input()
                     save_credential(add_credentials(default_accname, default_username, default_password))
+                    print('-' * 10)
                     print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
                     print('\n')    
                         
@@ -201,15 +208,17 @@ def main():
                                 default_password = input()
 
                                 save_credential(add_credentials(default_accname, default_username, default_password))
+                                print('-' * 10)
                                 print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
                                 print('\n')
                         
                         elif short_code == 'dc':
-                                if display_credentials(default_accname):
+                                if display_credentials():
                                     print("Welcome to the list of all your credentials")
                                     print('\n')
                                     
-                                    for credential in display_credentials(default_accname):
+                                    print('-' * 10)
+                                    for credential in display_credentials():
                                          print(f" Account Name: {credential.default_accname}  \n Username: {credential.default_username} \n Password: {credential.default_password}")
                                  
                                     print('\n')
@@ -226,7 +235,7 @@ def main():
                                     print('\n')
                                     search_account = find_credentials(default_accname)
                                     delete_credentials(search_account)
-                                    
+                                    print('-' * 10)
                                     print(f"Your Password Locker {default_accname} account deleted successfully")
                                     print('\n')
                                 else:
@@ -238,9 +247,9 @@ def main():
                                 default_accname = input()
                                 if existing_credentials(default_accname):
                                     print('\n')
+                                    print('-' * 10)
                                     search_account = find_credentials(default_accname)
                                     print(f"Hello, {default_username} your account credentials is as follows:")
-                                    print('-' * 10)
                                     
                                     print(f"Account Name: {default_accname}")
                                     print(f"Your Password: {default_password}")
@@ -250,7 +259,7 @@ def main():
                                     print('\n')
                                     
                         elif  short_code == 'lo':            
-                                    print("Goodbye {default_username}  Your have succefully logout your Password Locker account") 
+                                    print("Goodbye....Your have succefully logout your Password Locker account") 
                                     break  
                         else:
                             print("Sorry, invalid short code. Enter a valid code to continue")

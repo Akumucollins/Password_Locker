@@ -108,10 +108,10 @@
         "kind": 6,
         "importPath": "password_locker",
         "description": "password_locker",
-        "peekOfCode": "class User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name ",
+        "peekOfCode": "class User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password,confirm_password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name ",
         "detail": "password_locker",
         "documentation": {
-            "value": "\n```python\nfrom password_locker import User\n```\n\n```python\n\n\n```\n\n```python\nclass User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name \n```\n",
+            "value": "\n```python\nfrom password_locker import User\n```\n\n```python\n\n\n```\n\n```python\nclass User:\n    \"\"\"\n      Class that generates new instances of user.\n    \"\"\"\n    user_list = []\n    def __init__(self,first_name,last_name,user_name,password,confirm_password):\n      # docstring removed for simplicity\n        self.first_name = first_name\n        self.last_name = last_name\n        self.user_name = user_name \n```\n",
             "supportThemeIcons": false
         }
     },
@@ -132,10 +132,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def create_signup(first_name, last_name, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"",
+        "peekOfCode": "def create_signup(first_name, last_name,  created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name, last_name, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n```\n",
+            "value": "\n```python\nfrom run import create_signup\n```\n\n```python\n\n\n```\n\n```python\ndef create_signup(first_name, last_name,  created_user_password, confirm_password):\n    \"\"\"\n    Function to create a first time signup\n    \"\"\"\n    new_user = User(first_name, last_name, created_user_password, confirm_password)\n    return new_user\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -168,10 +168,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)",
+        "peekOfCode": "def save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials():\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials()",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import save_credential\n```\n\n```python\n\n\n```\n\n```python\ndef save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\n```\n",
+            "value": "\n```python\nfrom run import save_credential\n```\n\n```python\n\n\n```\n\n```python\ndef save_credential(account):\n    \"\"\"\n    Function to save account credentials details\n    \"\"\"\n    account.save_credentials() \ndef display_credentials():\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials()\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -180,10 +180,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)",
+        "peekOfCode": "def display_credentials():\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials()\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import display_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef display_credentials(default_accname):\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials(default_accname)\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)\n```\n",
+            "value": "\n```python\nfrom run import display_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef display_credentials():\n    \"\"\"\n    Function to display  credentials_list\n    \"\"\"\n    return Credentials.display_credentials()\ndef find_credentials(default_accname):\n    '''\n    Function that finds credentials by account name\n    '''\n    return Credentials.find_by_name(default_accname)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -240,10 +240,10 @@
         "kind": 6,
         "importPath": "user_test",
         "description": "user_test",
-        "peekOfCode": "class TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''",
+        "peekOfCode": "class TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\",\"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''",
         "detail": "user_test",
         "documentation": {
-            "value": "\n```python\nfrom user_test import TestUser\n```\n\n```python\n\n\n```\n\n```python\nclass TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''\n```\n",
+            "value": "\n```python\nfrom user_test import TestUser\n```\n\n```python\n\n\n```\n\n```python\nclass TestUser(unittest.TestCase):   \n    def setUp(self):\n        '''\n        Set up method to run before each test cases.\n        '''\n        self.new_user = User(\"Collins\", \"Akumu\", \"akumu_collins\", \"4321\",\"4321\") # create user object\n    def test_init(self):\n        '''\n        Test_init test case to test if the object is initialized properly\n        '''\n```\n",
             "supportThemeIcons": false
         }
     }
