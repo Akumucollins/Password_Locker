@@ -14,6 +14,12 @@ def save_user(user):
     """
     user.save_user() 
 
+def user_exist(name):
+    '''
+    check if user exists
+    '''
+    return User.user_exists(name)
+
 def add_credentials(default_accname, default_username, default_password):
     """
     Function to add a new account and its credentials
@@ -75,8 +81,11 @@ def main():
             
             save_user(create_signup( first_name, last_name, created_user_name, created_user_password, confirm_password))
             print('-' * 10)
-            print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
             
+            verification =  user_exist(created_user_name)
+            if verification == True:
+                print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
+                    
             while True:
                     print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
                     short_code = input().lower()
@@ -98,9 +107,12 @@ def main():
 
                         save_credential(add_credentials(default_accname, default_username, default_password))
                         print('-' * 10)
-                        print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
-                        print('\n')    
                         
+                        authentication = user_exist(default_username)
+                        if authentication == True:
+                            print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
+                            print('\n')      
+                            
                     while True:
                         print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 
                         short_code = input().lower()
@@ -192,8 +204,11 @@ def main():
                     default_password = input()
                     save_credential(add_credentials(default_accname, default_username, default_password))
                     print('-' * 10)
-                    print(f"Welcome {default_username} to your Password Locker account \n Account Name: {default_accname} \n Password: {default_password}")
-                    print('\n')    
+                    
+                    authentication = user_exist(default_username)
+                    if authentication == True:
+                            print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
+                            print('\n')    
                         
                     while True:
                         print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 

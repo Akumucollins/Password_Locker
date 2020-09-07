@@ -144,10 +144,22 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)",
+        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)\n```\n",
+            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "user_exist",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import user_exist\n```\n\n```python\n\n\n```\n\n```python\ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)\n```\n",
             "supportThemeIcons": false
         }
     },
