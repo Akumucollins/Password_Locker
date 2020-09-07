@@ -30,7 +30,7 @@
 * cd to the project directory issued after cloning it.
 * code . /atom . command  to open the text editor
 * to make this project executable in the terminal use  #!/usr/bin/env python3.8 and $ chmod +x run.py
-* to run or open the application program use $ ./run.py
+* to run or open the application program use $ python3 run.py
 
 ---
 
@@ -53,11 +53,13 @@
 | Initial short codes appears  |  User keys in y/n  |   If 'y' displayed input fields to signup or If  'n'displayed  input fields to login   |
 | Short codes display  |  User keys in 'lg' or 'lo'  |   Input fields for the names and password appear    |
 | Input fields accept input| User adds names and password  | Password locker account is created     |
-| Short code appears    |    User keys in cc     |  User enters account name, username and username   |
-| Short code reappears    |    User keys in dc     |  The account displays account name, username and password if there were saved account credentials   |
-| Short codes reappear   |    User keys in de  |   The search_account is deleted by   |
-|  Short codes reappear |  User keys in fc    | The account displays all the existing credentials in the credentials list    |
-| Final short codes appear   |     User keys in lo |  User logs out from their password locker account application   |
+| Display of short code appears    |    User keys in cc     |  User enters account name, username and username   |
+| Display of short code reappears    |    User keys in dc     |  The account displays account name, username and password if there were saved account credentials   |
+| Display of short codes reappear   |    User keys in de  |   The search_account is deleted by   |
+|  Display of short codes reappear |  User keys in fc    | The account displays all the existing credentials in the credentials list    |
+| Display of short codes appear   |     User keys in lo |  User logs out from their credentials account   |
+| Options of either enter or generate password dispalys  |     If user keys in 'ip' or 'gp' |  'ip'- entered password, 'gp' - an 8 character password is generated automatically |
+| Final short codes appear   |     User keys in ex |  User logs out from their password locker account application   |
 
 ---
 
