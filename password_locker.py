@@ -97,16 +97,14 @@ class Credentials:
 
         return False
     
-    # @classmethod    
-    # def rand_pass(cls, size):  
-        
-    #     '''
-    #     Method that generates a  password for the credentials_list
-    #     '''
-    #     generate_pass = ''.join([random.choice(  
-    #                     string.ascii_lowercase + string.digits)  
-    #                     for n in range(size)])  
-                            
-    #     return generate_pass 
+    @classmethod    
+    def rand_pass(cls,size):  
+        '''
+        Method that generates a  password for the credentials_list
+        '''
+        generate_pass = ''.join([random.choice(  
+                        string.ascii_lowercase + string.digits)  
+                        for n in range(size)])  
+        return generate_pass 
     
        

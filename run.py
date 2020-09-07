@@ -14,12 +14,6 @@ def save_user(user):
     """
     user.save_user() 
 
-def user_exist(name):
-    '''
-    check if user exists
-    '''
-    return User.user_exists(name)
-
 def add_credentials(default_accname, default_username, default_password):
     """
     Function to add a new account and its credentials
@@ -58,12 +52,20 @@ def delete_credentials(credentials):
     """
     return Credentials.delete_credentials(credentials)
 
+def rand_pass(size):
+    """
+    Function to create a password automatically
+    """
+    default_password = Credentials.rand_pass(8)
+    return default_password
+
 def main():
     
     while True: 
         print("*** Welcome to Password Locker!!! ***")
         print('\n')
         print("Do you have an account with Password Locker? y/n")
+        print("Use a short code: ex - to logout")
         option = input().lower()
         
         if option == "n":
@@ -82,10 +84,8 @@ def main():
             save_user(create_signup( first_name, last_name, created_user_name, created_user_password, confirm_password))
             print('-' * 10)
             
-            verification =  user_exist(created_user_name)
-            if verification == True:
-                print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
-                    
+            print(f"Congratulations, {first_name} {last_name} your have successfully created a Password Locker account \n Your Username is: {created_user_name} \n Your Password is: {confirm_password}")
+                
             while True:
                     print("Select a short code to navigate through:lg - login to an account :lo - logout an account")
                     short_code = input().lower()
@@ -102,17 +102,28 @@ def main():
                         default_accname = input()
                         print("Enter username")
                         default_username = input()
-                        print("Enter password")
-                        default_password = input()
-
+                       
+                        while True:
+                            print("Select a short code to navigate through: ip - to input your password :gp - to generate your password")
+                            short_code = input().lower()
+                            print('\n')
+                            
+                            if short_code == 'ip':
+                                print("Enter password")
+                                default_password = input()
+                                break
+                            
+                            elif short_code == 'gp':
+                                default_password = rand_pass(8)
+                                print(default_password)
+                                break
+                                
                         save_credential(add_credentials(default_accname, default_username, default_password))
                         print('-' * 10)
+                    
+                        print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
+                        print('\n')      
                         
-                        authentication = user_exist(default_username)
-                        if authentication == True:
-                            print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
-                            print('\n')      
-                            
                     while True:
                         print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 
                         short_code = input().lower()
@@ -122,9 +133,22 @@ def main():
                                 default_accname = input()
                                 print("Enter username")
                                 default_username = input()
-                                print("Enter password")
-                                default_password = input()
-
+                              
+                                while True:
+                                    print("Select a short code to navigate through: ip - to input your password :gp - to generate your password")
+                                    short_code = input().lower()
+                                    print('\n')
+                                    
+                                    if short_code == 'ip':
+                                        print("Enter password")
+                                        default_password = input()
+                                        break
+                                    
+                                    elif short_code == 'gp':
+                                        default_password = rand_pass(8)
+                                        print(default_password)
+                                        break
+                                    
                                 save_credential(add_credentials(default_accname, default_username, default_password))
                                 print('-' * 10)
                                 print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
@@ -199,16 +223,27 @@ def main():
                     default_accname = input()
                     print("Enter username")
                     default_username = input()
-                    print("Enter password")
-                    
-                    default_password = input()
+                  
+                    while True:
+                            print("Select a short code to navigate through: ip - to input your password :gp - to generate your password")
+                            short_code = input().lower()
+                            print('\n')
+                            
+                            if short_code == 'ip':
+                                print("Enter password")
+                                default_password = input()
+                                break
+                            
+                            elif short_code == 'gp':
+                                default_password = rand_pass(8)
+                                print(default_password)
+                                break
+                            
                     save_credential(add_credentials(default_accname, default_username, default_password))
                     print('-' * 10)
                     
-                    authentication = user_exist(default_username)
-                    if authentication == True:
-                            print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
-                            print('\n')    
+                    print(f"Welcome {default_username} to your account \n Account Name: {default_accname} \n Password: {default_password}")
+                    print('\n')    
                         
                     while True:
                         print("Use these short codes : cc - create new credentials, dc - display credentials, de - delete credentials, fc -find credentials, cls -copy credentials , lo - logout the account") 
@@ -219,9 +254,22 @@ def main():
                                 default_accname = input()
                                 print("Enter username")
                                 default_username = input()
-                                print("Enter password")
-                                default_password = input()
-
+                                
+                                while True:
+                                    print("Select a short code to navigate through: ip - to input your password :gp - to generate your password")
+                                    short_code = input().lower()
+                                    print('\n')
+                                    
+                                    if short_code == 'ip':
+                                        print("Enter password")
+                                        default_password = input()
+                                        break
+                                    
+                                    elif short_code == 'gp':
+                                        default_password = rand_pass(8)
+                                        print(default_password)
+                                        break
+                                    
                                 save_credential(add_credentials(default_accname, default_username, default_password))
                                 print('-' * 10)
                                 print(f"Your Password Locker Application saved a new credentials information as: \n Username: {default_username}  \n Account Name: {default_accname} \n Password: {default_password}")
@@ -278,6 +326,12 @@ def main():
                                     break  
                         else:
                             print("Sorry, invalid short code. Enter a valid code to continue")
-                            
+        
+        elif option == 'ex':
+            print("Thank you for using this application")
+            break
+        else:
+            print("You have used the wrong option. Please try again with valid option")  
+                        
 if __name__ == '__main__':
     main()        

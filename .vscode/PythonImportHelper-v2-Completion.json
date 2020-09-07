@@ -144,22 +144,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)",
+        "peekOfCode": "def save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
-        "label": "user_exist",
-        "kind": 2,
-        "importPath": "run",
-        "description": "run",
-        "peekOfCode": "def user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)",
-        "detail": "run",
-        "documentation": {
-            "value": "\n```python\nfrom run import user_exist\n```\n\n```python\n\n\n```\n\n```python\ndef user_exist(name):\n    '''\n    check if user exists\n    '''\n    return User.user_exists(name)\ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)\n```\n",
+            "value": "\n```python\nfrom run import save_user\n```\n\n```python\n\n\n```\n\n```python\ndef save_user(user):\n    \"\"\"\n    Function to save user signup details\n    \"\"\"\n    user.save_user() \ndef add_credentials(default_accname, default_username, default_password):\n    \"\"\"\n    Function to add a new account and its credentials\n    \"\"\"\n    new_credentials = Credentials(default_accname, default_username, default_password)\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -228,10 +216,22 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")",
+        "peekOfCode": "def delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef rand_pass(size):\n    \"\"\"\n    Function to create a password automatically\n    \"\"\"\n    default_password = Credentials.rand_pass(8)",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import delete_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n```\n",
+            "value": "\n```python\nfrom run import delete_credentials\n```\n\n```python\n\n\n```\n\n```python\ndef delete_credentials(credentials):\n    \"\"\"\n    Function to delete an account\n    \"\"\"\n    return Credentials.delete_credentials(credentials)\ndef rand_pass(size):\n    \"\"\"\n    Function to create a password automatically\n    \"\"\"\n    default_password = Credentials.rand_pass(8)\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "rand_pass",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def rand_pass(size):\n    \"\"\"\n    Function to create a password automatically\n    \"\"\"\n    default_password = Credentials.rand_pass(8)\n    return default_password\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')",
+        "detail": "run",
+        "documentation": {
+            "value": "\n```python\nfrom run import rand_pass\n```\n\n```python\n\n\n```\n\n```python\ndef rand_pass(size):\n    \"\"\"\n    Function to create a password automatically\n    \"\"\"\n    default_password = Credentials.rand_pass(8)\n    return default_password\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n```\n",
             "supportThemeIcons": false
         }
     },
@@ -240,10 +240,10 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n        option = input().lower()\n        if option == \"n\":\n            print(\"Signup to Password Locker account\")\n            print('Enter first name')\n            first_name = input()",
+        "peekOfCode": "def main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n        print(\"Use a short code: ex - to logout\")\n        option = input().lower()\n        if option == \"n\":\n            print(\"Signup to Password Locker account\")\n            print('Enter first name')",
         "detail": "run",
         "documentation": {
-            "value": "\n```python\nfrom run import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n        option = input().lower()\n        if option == \"n\":\n            print(\"Signup to Password Locker account\")\n            print('Enter first name')\n            first_name = input()\n```\n",
+            "value": "\n```python\nfrom run import main\n```\n\n```python\n\n\n```\n\n```python\ndef main():\n    while True: \n        print(\"*** Welcome to Password Locker!!! ***\")\n        print('\\n')\n        print(\"Do you have an account with Password Locker? y/n\")\n        print(\"Use a short code: ex - to logout\")\n        option = input().lower()\n        if option == \"n\":\n            print(\"Signup to Password Locker account\")\n            print('Enter first name')\n```\n",
             "supportThemeIcons": false
         }
     },
