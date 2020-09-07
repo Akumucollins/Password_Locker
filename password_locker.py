@@ -37,13 +37,13 @@ class Credentials:
     
     credentials_list = []
 
-    def __init__(self,account_name,user_name,password):
+    def __init__(self,default_accname,default_username,default_password):
       
         # docstring removed for simplicity
       
-        self.account_name = account_name
-        self.user_name = user_name
-        self.password = password 
+        self.default_accname = default_accname
+        self.default_username = default_username
+        self.default_password = default_password 
   
     def save_credentials(self):
         

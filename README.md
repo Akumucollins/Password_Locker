@@ -18,7 +18,7 @@
 ---
 
 ## Description
-> This application  allows users to  manage their passwords and even generate new unique random passwords for the users. Users can also able create new account, display and view the saved accounts, find the existing accounts and delete an account.
+> This application  allows users to  manage their passwords and even generate new unique random passwords for the users. Users can also create new account, display and view the saved accounts, find the existing accounts and delete an account.
 
 ## Setup/Installation Requirements
 * install the latest python3 in your computer with $ sudo apt-get update and sudo apt-get install python3.6 command
@@ -33,6 +33,13 @@
 * to run or open the application program use $ ./run.py
 
 ---
+
+## Dependencies
+>* TDD
+>* Pyperclip
+>* Virtual Environment
+
+***
 
 # Technologies Used
 
@@ -54,6 +61,7 @@
 
 ---
 
+## Support and Contact Information
 > The application is an open-source product if you  want to improve it or include an event of a bug  contact this
 > [Email](akumucollins001@gmail.com) .
 

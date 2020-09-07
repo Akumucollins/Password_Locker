@@ -120,10 +120,10 @@
         "kind": 6,
         "importPath": "password_locker",
         "description": "password_locker",
-        "peekOfCode": "class Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,account_name,user_name,password):\n        # docstring removed for simplicity\n        self.account_name = account_name\n        self.user_name = user_name\n        self.password = password ",
+        "peekOfCode": "class Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,default_accname,default_username,default_password):\n        # docstring removed for simplicity\n        self.default_accname = default_accname\n        self.default_username = default_username\n        self.default_password = default_password ",
         "detail": "password_locker",
         "documentation": {
-            "value": "\n```python\nfrom password_locker import Credentials\n```\n\n```python\n\n\n```\n\n```python\nclass Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,account_name,user_name,password):\n        # docstring removed for simplicity\n        self.account_name = account_name\n        self.user_name = user_name\n        self.password = password \n```\n",
+            "value": "\n```python\nfrom password_locker import Credentials\n```\n\n```python\n\n\n```\n\n```python\nclass Credentials:\n    \"\"\"\n      Class that generates new instances of credentials.\n    \"\"\"\n    credentials_list = []\n    def __init__(self,default_accname,default_username,default_password):\n        # docstring removed for simplicity\n        self.default_accname = default_accname\n        self.default_username = default_username\n        self.default_password = default_password \n```\n",
             "supportThemeIcons": false
         }
     },

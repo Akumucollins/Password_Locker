@@ -18,9 +18,9 @@ class TestUser(unittest.TestCase):
         Test_init test case to test if the object is initialized properly
         '''
         
-        self.assertEqual(self.new_credentials.account_name,"twitter")
-        self.assertEqual(self.new_credentials.user_name,"akumu_collins")
-        self.assertEqual(self.new_credentials.password,"1234")
+        self.assertEqual(self.new_credentials.default_accname,"twitter")
+        self.assertEqual(self.new_credentials.default_username,"akumu_collins")
+        self.assertEqual(self.new_credentials.default_password,"1234")
 
     def test_save_credentials(self):
         
