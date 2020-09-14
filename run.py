@@ -199,7 +199,7 @@ def main():
                                     print(f"Your Password: {default_password}")
                                     
                                 else:
-                                    print("The {default_accname} account credentials doesn't exist")
+                                    print("The account credentials doesn't exist")
                                     print('\n')
                                     
                         elif  short_code == 'lo':            
@@ -318,7 +318,7 @@ def main():
                                     print(f"Your Password: {default_password}")
                                     
                                 else:
-                                    print("The {default_accname} account credentials doesn't exist")
+                                    print("The account credentials doesn't exist")
                                     print('\n')
                                     
                         elif  short_code == 'lo':            
