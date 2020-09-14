@@ -179,7 +179,7 @@ def main():
                                     delete_credentials(search_account)
                                     
                                     print('-' * 10)
-                                    print(f"Your Password Locker {default_accname} account deleted successfully")
+                                    print(f"Your Password Locker has deleted {default_accname} account successfully")
                                     print('\n')
                                 else:
                                     print("The {default_accname} account credentials you want to delete doesn't exist")   
@@ -299,7 +299,7 @@ def main():
                                     search_account = find_credentials(default_accname)
                                     delete_credentials(search_account)
                                     print('-' * 10)
-                                    print(f"Your Password Locker {default_accname} account deleted successfully")
+                                    print(f"Your Password Locker has deleted {default_accname} account successfully")
                                     print('\n')
                                 else:
                                     print("The {default_accname} account credentials you want to delete doesn't exist")   

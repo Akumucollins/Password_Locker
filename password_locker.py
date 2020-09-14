@@ -63,7 +63,7 @@ class Credentials:
       return cls.credentials_list
   
     @classmethod
-    def find_by_name(cls,acc_name):
+    def find_by_name(cls,default_accname):
         '''
         Method that takes in account name and return credential object that matches that account name
          Args:
@@ -73,7 +73,7 @@ class Credentials:
         '''
 
         for credentials in cls.credentials_list:
-            if credentials.account_name == acc_name:
+            if credentials.default_accname == default_accname:
              return credentials
     
     def delete_credentials(self):
@@ -83,7 +83,7 @@ class Credentials:
         Credentials.credentials_list.remove(self)
         
     @classmethod 
-    def credentials_exists(cls,acc_name):
+    def credentials_exists(cls,default_accname):
         '''
         Method that checks if credentials exists from the credentials list.
         Args:
@@ -92,7 +92,7 @@ class Credentials:
             Boolean: True or false depending if the credentials exists
         '''
         for credentials in cls.credentials_list:
-            if credentials.account_name == acc_name:
+            if credentials.default_accname == default_accname:
              return True
 
         return False
