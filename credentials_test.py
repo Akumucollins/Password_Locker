@@ -69,7 +69,7 @@ class TestUser(unittest.TestCase):
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_name("twitter")
         
-        self.assertEqual(found_credentials.user_name,test_credentials.user_name)
+        self.assertEqual(found_credentials.default_username,test_credentials.default_username)
         
     def test_delete_credentials(self):
         

@@ -56,18 +56,6 @@
         }
     },
     {
-        "label": "pyperclip",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pyperclip",
-        "description": "pyperclip",
-        "detail": "pyperclip",
-        "documentation": {
-            "value": "\n```python\nimport pyperclip\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
         "label": "string",
         "kind": 6,
         "isExtraImport": true,
