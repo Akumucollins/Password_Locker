@@ -1,17 +1,5 @@
 [
     {
-        "label": "pyperclip",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pyperclip",
-        "description": "pyperclip",
-        "detail": "pyperclip",
-        "documentation": {
-            "value": "\n```python\nimport pyperclip\n```\n",
-            "supportThemeIcons": false
-        }
-    },
-    {
         "label": "unittest",
         "kind": 6,
         "isExtraImport": true,
@@ -64,6 +52,18 @@
         "detail": "password_locker",
         "documentation": {
             "value": "\n```python\nimport password_locker\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "pyperclip",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyperclip",
+        "description": "pyperclip",
+        "detail": "pyperclip",
+        "documentation": {
+            "value": "\n```python\nimport pyperclip\n```\n",
             "supportThemeIcons": false
         }
     },

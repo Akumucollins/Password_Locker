@@ -1,4 +1,3 @@
-import pyperclip
 import unittest
 from password_locker import Credentials
 
